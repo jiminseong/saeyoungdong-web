@@ -1,26 +1,30 @@
 @import "tailwindcss";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm Beige Palette */
+  --color-warm-beige: #fdfbf7;
+  --color-soft-brown: #4a4a4a;
+
+  /* Orange Palette */
+  --color-orange-primary: #f97316;
+  --color-orange-active: #ea580c;
+
+  /* Font */
+  --font-pretendard: "Pretendard", "Noto Sans KR", sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-warm-beige: var(--color-warm-beige);
+  --color-soft-brown: var(--color-soft-brown);
+  --color-orange-primary: var(--color-orange-primary);
+  --color-orange-active: var(--color-orange-active);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-pretendard);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-warm-beige);
+  color: var(--color-soft-brown);
+  font-family: var(--font-pretendard);
 }

@@ -11,14 +11,14 @@
 - [x] Vercel 배포 및 도메인(saeyoungdong.com) 연결
 
 ## 2. 디자인 시스템 구축 (Design System)
-- [ ] `globals.css`: 기본 배경색(Warm Beige), 폰트(Pretendard/명조) 설정
-- [ ] `tailwind.config.ts` (또는 globals): 커스텀 컬러(Orange, Beige) 및 쉐도우 정의
-- [ ] 공통 컴포넌트 개발:
-  - [ ] `LangSwitcher`: 언어 변경 컴포넌트 추가
-  - [ ] `Button`: Primary(Orange), Secondary(Outline)
-  - [ ] `Card`: 메뉴/소개용 둥근 모서리 카드
-  - [ ] `Navbar`: 반응형 네비게이션
-  - [ ] `Footer`: 정보 및 카피라이트
+- [x] `globals.css`: 기본 배경색(Warm Beige), 폰트(Pretendard/명조) 설정
+- [x] `tailwind.config.ts` (또는 globals): 커스텀 컬러(Orange, Beige) 및 쉐도우 정의
+- [x] 공통 컴포넌트 개발:
+  - [x] `LangSwitcher`: 언어 변경 컴포넌트 추가
+  - [x] `Button`: Primary(Orange), Secondary(Outline)
+  - [x] `Card`: 메뉴/소개용 둥근 모서리 카드
+  - [x] `Navbar`: 반응형 네비게이션
+  - [x] `Footer`: 정보 및 카피라이트
 
 ## 3. 페이지 개발 (Pages)
 ### 3.1 메인 페이지 (`/`) - Landing & About & Contact
