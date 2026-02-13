@@ -5,13 +5,13 @@
 
 ## 1. 초기 설정 (Setup)
 - [x] Next.js (App Router, TypeScript) 프로젝트 생성
-- [x] 커스텀 컬러(Brown, Beige, Orange) 및 폰트(BMEULJIRO) 설정
+- [x] 커스텀 컬러(Brown, Beige, Orange) 및 폰트(Noto Serif KR) 설정
 - [x] Next-intl 설정 (ko, en, zh) 및 미들웨어 구성
 - [x] 기본 디렉토리 구조 (messages, components, layout, ui) 구성
 - [x] Vercel 배포 및 도메인 연결 준비
 
 ## 2. 디자인 시스템 구축 (Design System)
-- [x] `globals.css`: Warm Beige 배경, BMEULJIRO/Pretendard 폰트 최적화
+- [x] `globals.css`: Warm Beige 배경, Noto Serif KR/Pretendard 폰트 최적화
 - [x] 공통 컴포넌트 개발:
   - [x] `LangSwitcher`: 언어 변경 컴포넌트
   - [x] `Button`: Primary, Outline 스타일
@@ -31,7 +31,7 @@
 - [x] `ko.json` 메뉴 데이터 업데이트 (실제 메뉴판 기준 최신화)
 - [x] 카테고리별 메뉴 리스트: 한우, 돼지고기, 식사류, 주류 구성
 - [x] 메뉴 아이템 컴포넌트: 대시 라인 스타일링 및 다국어 설명 대응
-- [ ] `en.json`, `zh.json` 영문/중문 메뉴 번역 완성
+- [x] `en.json`, `zh.json` 영문/중문 메뉴 번역 완성 (룸 넘버 연동 포함)
 
 ## 4. 기능 및 최적화
 - [x] 반응형 세부 조정: 모바일 뱃지 스케일, 히어로 섹션 여백 최적화
