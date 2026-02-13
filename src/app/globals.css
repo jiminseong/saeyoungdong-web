@@ -1,30 +1,77 @@
-@import "tailwindcss";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "BMEULJIRO";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/BMEULJIRO.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  /* Warm Beige Palette */
-  --color-warm-beige: #fdfbf7;
-  --color-soft-brown: #4a4a4a;
+  /* --- Warm Color Palette (따뜻한 톤) --- */
+  --color-warm-beige: #faf6f0; /* 배경: 따뜻한 크림 */
+  --color-ivory: #f5ede3; /* 카드 배경 */
+  --color-soft-brown: #5c4033; /* 메인 텍스트: 진짜 갈색 */
+  --color-dark-brown: #3b2417; /* Footer/강조 배경: 짙은 갈색 */
+  --color-light-brown: #8b6f5e; /* 보조 텍스트 */
 
-  /* Orange Palette */
-  --color-orange-primary: #f97316;
-  --color-orange-active: #ea580c;
+  /* Orange Accent */
+  --color-orange-primary: #e8732a; /* 메인 포인트: 따뜻한 주황 */
+  --color-orange-active: #d4621d; /* 호버 포인트 */
+  --color-orange-light: #fff0e5; /* 연한 주황 배경 */
 
   /* Font */
-  --font-pretendard: "Pretendard", "Noto Sans KR", sans-serif;
+  --font-pretendard: "Pretendard", -apple-system, "Noto Sans KR", sans-serif;
+  --font-euljiro: "BMEULJIRO", "Noto Serif KR", serif;
 }
 
 @theme inline {
   --color-warm-beige: var(--color-warm-beige);
+  --color-ivory: var(--color-ivory);
   --color-soft-brown: var(--color-soft-brown);
+  --color-dark-brown: var(--color-dark-brown);
+  --color-light-brown: var(--color-light-brown);
   --color-orange-primary: var(--color-orange-primary);
   --color-orange-active: var(--color-orange-active);
+  --color-orange-light: var(--color-orange-light);
 
   --font-sans: var(--font-pretendard);
+  --font-serif: var(--font-euljiro);
+
+  --shadow-organic: 0 10px 30px -10px rgba(92, 64, 51, 0.15);
+  --shadow-photo: 0 20px 40px -20px rgba(59, 36, 23, 0.2);
 }
 
 body {
   background-color: var(--color-warm-beige);
   color: var(--color-soft-brown);
   font-family: var(--font-pretendard);
+  /* Subtle paper noise */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.text-balance-header {
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+.pause:hover {
+  animation-play-state: paused;
 }
