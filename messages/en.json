@@ -29,16 +29,25 @@
     },
     "about": {
       "title": "Location & Reservation",
+      "addressLabel": "Address",
       "address": "13 Pungyang-ro 9-gil, Jecheon-si, Chungbuk",
-      "parking": "Citizen Parking Tower (Free ticket), Joongang Church Parking",
-      "hours": "Open: 11:00 - 22:00 (Please call)",
-      "contact": "Reservation: 043-645-9008"
+      "parking": "(Citizen Parking Tower ticket provided / Joongang Church Parking)",
+      "phoneLabel": "Reservation",
+      "hoursLabel": "Operating Hours",
+      "hours": "Daily 11:00 - 22:00",
+      "hoursNote": "* May close early if ingredients run out",
+      "buttons": {
+        "naver": "View on Naver Map",
+        "kakao": "View on Kakao Map",
+        "call": "Call"
+      }
     },
     "gallery": {
       "title": "Gallery & Private Rooms",
       "subtitle": "Comfortable Space & Private Rooms",
       "description": "We have independent rooms optimized for family gatherings and group dinners. Providing the room number helps with faster reservations.",
-      "roomBadge": "ROOM {num}"
+      "roomBadge": "ROOM {num}",
+      "dragToExplore": "Drag to explore"
     }
   },
   "MenuPage": {
@@ -99,6 +108,7 @@
       "home": "HOME",
       "menu": "MENU"
     },
+    "since": "Since 1993",
     "footer": {
       "rights": "© 2026 Jecheon Saeyoungdong Galbi. All rights reserved."
     },

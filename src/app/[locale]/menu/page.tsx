@@ -102,10 +102,10 @@ export default function MenuPage() {
 function MenuItem({ name, price, desc }: { name: string; price: string; desc: string }) {
   return (
     <div className="flex flex-col gap-2 group cursor-default">
-      <div className="flex justify-between items-baseline gap-4 group-hover:translate-x-1 transition-transform duration-300">
-        <h3 className="text-xl md:text-2xl font-serif text-soft-brown whitespace-nowrap">{name}</h3>
-        <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5" />
-        <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap">
+      <div className="flex justify-between items-baseline gap-2 group-hover:translate-x-1 transition-transform duration-300">
+        <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0">{name}</h3>
+        <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5 min-w-[10px]" />
+        <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap flex-shrink-0">
           {price}
         </span>
       </div>

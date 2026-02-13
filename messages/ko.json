@@ -46,7 +46,8 @@
       "title": "매장 전경 및 단체실",
       "subtitle": "쾌적한 공간과 프라이빗한 룸",
       "description": "가족 모임과 단체 회식에 최적화된 독립된 룸이 준비되어 있습니다.\n전화 문의 시 방 번호를 알려주시면 빠른 예약에 도움이 됩니다.",
-      "roomBadge": "{num}번방"
+      "roomBadge": "{num}번방",
+      "dragToExplore": "드래그하여 둘러보기"
     }
   },
   "MenuPage": {
@@ -107,6 +108,7 @@
       "home": "홈",
       "menu": "메뉴"
     },
+    "since": "Since 1993",
     "footer": {
       "rights": "© 2026 제천새영동숯불갈비. All rights reserved."
     },

@@ -45,7 +45,7 @@ export default function Gallery() {
             </div>
             <div className="hidden md:block">
               <span className="text-light-brown/40 text-[10px] font-sans tracking-[0.2em] uppercase">
-                Drag to explore
+                {t("gallery.dragToExplore")}
               </span>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Gallery from "@/components/home/Gallery";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+  const tc = useTranslations("Common");
 
   return (
     <div className="w-full relative overflow-hidden">
@@ -11,11 +12,11 @@ export default function HomePage() {
       <div className="absolute top-[-15%] right-[-10%] w-[500px] h-[500px] bg-orange-light rounded-full blur-3xl -z-10" />
 
       {/* Hero Section */}
-      <div className="max-w-6xl mx-auto px-6 py-12 md:py-32 flex flex-col md:flex-row items-center gap-8 md:gap-20">
+      <div className="max-w-6xl mx-auto px-6 py-12 md:pb-40 md:pt-18 flex flex-col md:flex-row items-center gap-8 md:gap-20">
         {/* Left: Text */}
         <div className="flex-1 flex flex-col items-start gap-6 z-10">
           <span className="inline-block px-4 py-1 border border-light-brown rounded-full text-sm font-sans tracking-widest text-light-brown">
-            Since 1993
+            {tc("since")}
           </span>
 
           <h1 className="text-5xl md:text-7xl font-serif text-soft-brown leading-tight text-balance-header tracking-tight">
@@ -65,7 +66,7 @@ export default function HomePage() {
               {/* Content Box */}
               <div className="text-white text-center flex flex-col items-center z-10 px-2">
                 <span className="text-[10px] md:text-[11px] font-sans font-bold tracking-[0.15em] opacity-80 uppercase mb-1 drop-shadow-sm">
-                  Since 1993
+                  {tc("since")}
                 </span>
 
                 <div className="w-8 h-px bg-white/40 mb-2" />
@@ -118,32 +119,32 @@ export default function HomePage() {
       </section>
 
       {/* Features - Alternating Layout */}
-      <section className="bg-ivory py-24">
-        <div className="max-w-4xl mx-auto px-6 flex flex-col gap-20">
+      <section className="bg-ivory py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col gap-24 md:gap-32">
           {/* Feature 1 */}
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-full md:w-2/5 aspect-square bg-warm-beige rounded-[2rem] shadow-inner order-2 md:order-1" />
-            <div className="flex-1 order-1 md:order-2">
-              <h3 className="text-2xl md:text-3xl font-serif text-soft-brown mb-3">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20">
+            <div className="w-full md:w-1/2 aspect-square bg-warm-beige rounded-[2.5rem] shadow-inner order-1" />
+            <div className="flex-1 order-2 space-y-4">
+              <h3 className="text-3xl md:text-5xl font-serif text-soft-brown leading-tight">
                 {t("intro.feature1")}
               </h3>
-              <p className="text-light-brown leading-relaxed font-sans break-keep">
+              <p className="text-light-brown leading-relaxed font-sans break-keep text-lg md:text-xl opacity-90">
                 {t("intro.feature1Desc")}
               </p>
             </div>
           </div>
 
           {/* Feature 2 */}
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-serif text-soft-brown mb-3">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20">
+            <div className="w-full md:w-1/2 aspect-square bg-warm-beige rounded-[2.5rem] shadow-inner order-1 md:order-2" />
+            <div className="flex-1 order-2 md:order-1 space-y-4">
+              <h3 className="text-3xl md:text-5xl font-serif text-soft-brown leading-tight">
                 {t("intro.feature2")}
               </h3>
-              <p className="text-light-brown leading-relaxed font-sans break-keep">
+              <p className="text-light-brown leading-relaxed font-sans break-keep text-lg md:text-xl opacity-90">
                 {t("intro.feature2Desc")}
               </p>
             </div>
-            <div className="w-full md:w-2/5 aspect-square bg-warm-beige rounded-[2rem] shadow-inner" />
           </div>
 
           {/* Feature 3: Center Quote */}

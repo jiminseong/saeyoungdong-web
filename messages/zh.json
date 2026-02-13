@@ -29,16 +29,25 @@
     },
     "about": {
       "title": "位置与预约",
+      "addressLabel": "地址",
       "address": "忠清北道 堤川市 丰阳路9街 13",
-      "parking": "市民停车塔（提供停车券），中央圣洁教会停车场",
-      "hours": "营业时间: 11:00 - 22:00 (请电话咨询)",
-      "contact": "预约电话: 043-645-9008"
+      "parking": "(提供市民停车塔停车券 / 中央圣洁教会停车场)",
+      "phoneLabel": "预约咨询",
+      "hoursLabel": "营业时间",
+      "hours": "每天 11:00 - 22:00",
+      "hoursNote": "* 食材耗尽时可能会提前闭店",
+      "buttons": {
+        "naver": "在Naver地图查看",
+        "kakao": "在Kakao地图查看",
+        "call": "拨打电话"
+      }
     },
     "gallery": {
       "title": "店面全景及团体房",
       "subtitle": "舒适的空间与私密包间",
       "description": "准备了最适合家庭聚회和团体聚餐的独立包间。咨询时如能告知房间号，将有助于更快速地为您预约。",
-      "roomBadge": "{num}号房"
+      "roomBadge": "{num}号房",
+      "dragToExplore": "左右拖动查看"
     }
   },
   "MenuPage": {
@@ -99,6 +108,7 @@
       "home": "首页",
       "menu": "菜单"
     },
+    "since": "Since 1993",
     "footer": {
       "rights": "© 2026 堤川新永东炭火排骨. 版权所有."
     },
