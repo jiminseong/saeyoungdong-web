@@ -1,0 +1,45 @@
+{
+  "HomePage": {
+    "title": "新永东炭火排骨",
+    "description": "Since 1993, 手工咸兴冷面与韩牛生排骨",
+    "hero": {
+      "headline": "Since 1993, 满载诚意的韩牛炭火排骨",
+      "subheadline": "老板亲自挑选剔骨，正宗韩牛的味道",
+      "ctaWait": "请稍候",
+      "ctaMenu": "查看菜单",
+      "ctaReservation": "电话预约"
+    },
+    "intro": {
+      "feature1": "手工冷面",
+      "feature1Desc": "采用 100% 地瓜淀粉，现点现做。",
+      "feature2": "老板亲自剔骨",
+      "feature2Desc": "精心挑选并处理最优质的韩牛，确保新鲜。",
+      "feature3": "天然药材腌制",
+      "feature3Desc": "使用黄芪、甘草等 6 种药材腌制，口感清淡柔和。"
+    },
+    "about": {
+      "title": "位置与预约",
+      "address": "忠清北道 堤川市 丰阳路9街 13",
+      "parking": "市民停车塔（提供停车券），中央圣洁教会停车场",
+      "hours": "营业时间: 11:00 - 22:00 (请电话咨询)",
+      "contact": "预约电话: 043-645-9008"
+    }
+  },
+  "MenuPage": {
+    "title": "菜单",
+    "categories": {
+      "beef": "烤肉类",
+      "meal": "主食类",
+      "drink": "酒类"
+    },
+    "items": {
+      "galbi": "生排骨",
+      "anchang": "安格斯牛肉"
+    }
+  },
+  "Common": {
+    "loading": "加载中...",
+    "error": "发生错误。",
+    "won": "韩元"
+  }
+}

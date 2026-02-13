@@ -1,0 +1,45 @@
+{
+  "HomePage": {
+    "title": "Saeyoungdong Galbi",
+    "description": "Since 1993, Handmade Hamheung Naengmyeon and Hanwoo Beef Ribs",
+    "hero": {
+      "headline": "Since 1993, Authentic Hanwoo Charcoal Galbi",
+      "subheadline": "Carefully selected and prepared by the owner daily",
+      "ctaWait": "Coming Soon",
+      "ctaMenu": "View Menu",
+      "ctaReservation": "Call Now"
+    },
+    "intro": {
+      "feature1": "Handmade Noodles",
+      "feature1Desc": "Freshly pulled 100% sweet potato starch noodles.",
+      "feature2": "Hand-Cut Hanwoo",
+      "feature2Desc": "Expertly butchered Hanwoo beef ensuring freshness.",
+      "feature3": "Natural Seasoning",
+      "feature3Desc": "Marinated with 6 medicinal herbs for a subtle, natural flavor."
+    },
+    "about": {
+      "title": "Location & Reservation",
+      "address": "13 Pungyang-ro 9-gil, Jecheon-si, Chungbuk",
+      "parking": "Citizen Parking Tower (Free ticket), Joongang Church Parking",
+      "hours": "Open: 11:00 - 22:00 (Please call)",
+      "contact": "Reservation: 043-645-9008"
+    }
+  },
+  "MenuPage": {
+    "title": "Our Menu",
+    "categories": {
+      "beef": "BBQ",
+      "meal": "Meal",
+      "drink": "Drink"
+    },
+    "items": {
+      "galbi": "Fresh Galbi",
+      "anchang": "Anchangsal"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred.",
+    "won": "won"
+  }
+}

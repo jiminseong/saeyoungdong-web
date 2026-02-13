@@ -1,0 +1,45 @@
+{
+  "HomePage": {
+    "title": "새영동 숯불갈비",
+    "description": "Since 1993, 직접 뽑은 함흥냉면과 한우 생갈비",
+    "hero": {
+      "headline": "Since 1993, 정성을 담은 한우 숯불갈비",
+      "subheadline": "사장이 직접 발골하고 양념하는 진짜 갈비의 맛",
+      "ctaWait": "잠시만 기다려주세요",
+      "ctaMenu": "메뉴 보기",
+      "ctaReservation": "전화 문의"
+    },
+    "intro": {
+      "feature1": "직접 뽑은 함흥냉면",
+      "feature1Desc": "고구마 전분 100%로 직접 반죽해 뽑아냅니다.",
+      "feature2": "사장님이 직접 발골",
+      "feature2Desc": "최상급 한우를 직접 손질하여 신선함을 유지합니다.",
+      "feature3": "6가지 한약재 양념",
+      "feature3Desc": "황기, 감초 등 천연 재료로 달지 않고 은은한 맛을 냅니다."
+    },
+    "about": {
+      "title": "오시는 길 & 예약",
+      "address": "충북 제천시 풍양로9길 13",
+      "parking": "시민 주차 타워 (주차권 제공), 중앙성결교회 주차장",
+      "hours": "영업시간: 11:00 - 22:00 (문의 요망)",
+      "contact": "예약 문의: 043-645-9008"
+    }
+  },
+  "MenuPage": {
+    "title": "메뉴 소개",
+    "categories": {
+      "beef": "고기류",
+      "meal": "식사류",
+      "drink": "주류"
+    },
+    "items": {
+      "galbi": "생갈비",
+      "anchang": "안창살"
+    }
+  },
+  "Common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다.",
+    "won": "원"
+  }
+}
