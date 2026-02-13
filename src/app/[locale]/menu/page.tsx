@@ -1,0 +1,116 @@
+import { useTranslations } from "next-intl";
+import { getMessages } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  // @ts-ignore
+  const menuTitle = messages.MenuPage.title;
+
+  return {
+    title: `${menuTitle} | 새영동 숯불갈비`,
+  };
+}
+
+export default function MenuPage() {
+  const t = useTranslations("MenuPage");
+
+  const categories = [
+    {
+      id: "beef",
+      items: [
+        { id: "hanwoo_galbi", price: "54,000" },
+        { id: "hanwoo_anchang", price: "51,000" },
+        { id: "hanwoo_galbisal", price: "39,000" },
+        { id: "hanwoo_deungsim", price: "50,000" },
+        { id: "hanwoo_teukyang", price: "39,000" },
+        { id: "hanwoo_yangnyeom_galbisal", price: "39,000" },
+        { id: "hanwoo_yangnyeom_so_galbi", price: "39,000" },
+        { id: "hanwoo_yukhoe", price: "53,000 / 43,000 / 33,000" },
+        { id: "pork_galbi", price: "18,000" },
+        { id: "pork_jjageuli", price: "18,000" },
+        { id: "pork_samgyeopsal", price: "17,000" },
+      ],
+    },
+    {
+      id: "meal",
+      items: [
+        { id: "naengmyeon_mul", price: "8,000" },
+        { id: "naengmyeon_bibim", price: "9,000" },
+        { id: "naengmyeon_hoe", price: "12,000" },
+        { id: "yukgaejang", price: "10,000" },
+        { id: "galbitang", price: "12,000" },
+        { id: "doenjang", price: "1,000" },
+        { id: "rice", price: "1,000" },
+      ],
+    },
+    {
+      id: "drink",
+      items: [
+        { id: "drinks_soju", price: "5,000" },
+        { id: "soda", price: "2,000" },
+      ],
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-warm-beige pt-32 pb-20">
+      <div className="max-w-4xl mx-auto px-6">
+        <header className="text-center mb-20">
+          <span className="text-orange-primary font-serif tracking-[0.2em] text-sm mb-4 block">
+            OUR MENU
+          </span>
+          <h1 className="text-5xl md:text-6xl font-serif text-soft-brown mb-6">{t("title")}</h1>
+          <div className="w-16 h-0.5 bg-orange-primary mx-auto" />
+        </header>
+
+        <div className="space-y-24">
+          {categories.map((category) => (
+            <section key={category.id} className="space-y-10">
+              <h2 className="text-2xl md:text-3xl font-serif text-soft-brown border-b-2 border-orange-primary/20 pb-4 inline-block tracking-tight">
+                {t(`categories.${category.id}`)}
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                {category.items.map((item) => (
+                  <MenuItem
+                    key={item.id}
+                    name={t(`items.${item.id}`)}
+                    price={item.price}
+                    desc={t.has(`descriptions.${item.id}`) ? t(`descriptions.${item.id}`) : ""}
+                  />
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <footer className="mt-32 text-center border-t border-soft-brown/10 pt-10">
+          <p className="text-light-brown font-sans text-sm break-keep">
+            * 모든 고기 메뉴의 중량은 정량(생고기 기준)을 원칙으로 합니다.
+            <br />* 계절 및 수급 상황에 따라 일부 메뉴가 변경될 수 있습니다.
+          </p>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+function MenuItem({ name, price, desc }: { name: string; price: string; desc: string }) {
+  return (
+    <div className="flex flex-col gap-2 group cursor-default">
+      <div className="flex justify-between items-baseline gap-4 group-hover:translate-x-1 transition-transform duration-300">
+        <h3 className="text-xl md:text-2xl font-serif text-soft-brown whitespace-nowrap">{name}</h3>
+        <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5" />
+        <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap">
+          {price}
+        </span>
+      </div>
+      {desc && (
+        <p className="text-sm md:text-base text-light-brown font-sans leading-relaxed break-keep">
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}

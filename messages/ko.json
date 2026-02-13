@@ -17,12 +17,26 @@
       "feature3": "6가지 한약재 양념",
       "feature3Desc": "황기, 감초 등 천연 재료로 달지 않고 은은한 맛을 냅니다."
     },
+    "story": {
+      "title": "30년을 이어온 진심의 맛",
+      "p1": "새영동숯불갈비는 1993년 문을 연 이래, 제천 시민들의 사랑을 받으며 2대째 그 맛을 지켜오고 있습니다.",
+      "p2": "엄선된 한우와 국내산 식재료만을 고집하는 정직함, 그리고 내 가족을 대하는 따뜻한 환대. 이것이 저희가 지난 30년간 지켜온 가장 소중한 가치입니다.",
+      "quote": "깨끗한 예스러움 속에서 느껴지는 정통의 풍미를 경험해 보세요."
+    },
     "about": {
-      "title": "오시는 길 & 예약",
+      "title": "오시는 길",
+      "addressLabel": "주소",
       "address": "충북 제천시 풍양로9길 13",
-      "parking": "시민 주차 타워 (주차권 제공), 중앙성결교회 주차장",
-      "hours": "영업시간: 11:00 - 22:00 (문의 요망)",
-      "contact": "예약 문의: 043-645-9008"
+      "parking": "(시민 주차 타워 주차권 제공 / 중앙성결교회 주차장)",
+      "phoneLabel": "예약 문의",
+      "hoursLabel": "영업시간",
+      "hours": "매일 11:00 - 22:00",
+      "hoursNote": "* 재료 소진 시 조기 마감될 수 있습니다",
+      "buttons": {
+        "naver": "네이버 지도에서 보기",
+        "kakao": "카카오맵에서 보기",
+        "call": "전화하기"
+      }
     }
   },
   "MenuPage": {
@@ -33,8 +47,45 @@
       "drink": "주류"
     },
     "items": {
-      "galbi": "생갈비",
-      "anchang": "안창살"
+      "hanwoo_galbi": "생갈비 (2대)",
+      "hanwoo_anchang": "안창살 (160g)",
+      "hanwoo_galbisal": "갈비살 (180g)",
+      "hanwoo_deungsim": "생등심/안심 (180g)",
+      "hanwoo_teukyang": "한방 특양 (180g)",
+      "hanwoo_yangnyeom_galbisal": "한방 양념갈비살 (180g)",
+      "hanwoo_yangnyeom_so_galbi": "한방 양념소갈비 (2대)",
+      "hanwoo_yukhoe": "한방 육회",
+      "pork_galbi": "한방 돼지갈비 (250g)",
+      "pork_jjageuli": "한방 돼지갈비 짜글이 (250g)",
+      "pork_samgyeopsal": "삼겹살 (180g)",
+      "naengmyeon_mul": "함흥 물냉면",
+      "naengmyeon_bibim": "함흥 비빔냉면",
+      "naengmyeon_hoe": "함흥 회냉면",
+      "yukgaejang": "육개장",
+      "galbitang": "갈비탕",
+      "doenjang": "된장찌개",
+      "rice": "공기밥",
+      "drinks_soju": "소주 / 맥주",
+      "soda": "음료수"
+    },
+    "descriptions": {
+      "hanwoo_galbi": "사장이 직접 손질한 최상급 국내산 한우",
+      "hanwoo_anchang": "육향이 진하고 부드러운 국내산 한우 특수 부위",
+      "hanwoo_galbisal": "고소한 풍미가 일품인 국내산 한우",
+      "hanwoo_deungsim": "입안에서 녹는 부드러움, 국내산 한우",
+      "hanwoo_teukyang": "6가지 한약재로 건강하게 맛을 낸 한우 특양",
+      "hanwoo_yangnyeom_galbisal": "특제 한방 양념으로 감칠맛을 더한 갈비살",
+      "hanwoo_yangnyeom_so_galbi": "전통 비법으로 재워낸 달지 않은 양념 소갈비",
+      "hanwoo_yukhoe": "신선한 한우 본연의 맛을 살린 한방 육회",
+      "pork_galbi": "직접 만든 한방 양념으로 숙성시킨 돼지갈비",
+      "pork_jjageuli": "얼큰하게 자작하게 끓여낸 별미 돼지갈비",
+      "pork_samgyeopsal": "고소하고 쫄깃한 국내산 생삼겹살",
+      "naengmyeon_mul": "100% 고구마 전분으로 직접 뽑은 면",
+      "naengmyeon_bibim": "매콤달콤한 비법 양념의 조화",
+      "naengmyeon_hoe": "국내산 간오리 회무침이 올라간 별미 냉면",
+      "yukgaejang": "한우를 듬뿍 넣어 푹 끓여낸 얼큰한 육개장",
+      "galbitang": "정성으로 우려낸 깊고 진한 한우 갈비탕",
+      "doenjang": "직접 담근 된장과 멸치 육수의 진한 맛"
     }
   },
   "Common": {
