@@ -2,10 +2,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Inter } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import "../globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default async function LocaleLayout({
   children,
@@ -30,8 +29,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} antialiased font-sans bg-[#FDFBF7] text-[#4A4A4A]`}>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+      <body className="antialiased font-sans bg-warm-beige text-soft-brown flex flex-col min-h-screen">
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main className="flex-grow pt-16">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
