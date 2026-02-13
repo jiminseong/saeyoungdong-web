@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import KakaoMap from "@/components/map/KakaoMap";
+import { Phone } from "lucide-react";
 
 const NAVER_MAP_URL = "https://map.naver.com/p/entry/place/37944232";
 const KAKAO_MAP_URL = "https://place.map.kakao.com/9822284";
@@ -48,7 +49,7 @@ export default function Footer() {
                     href="tel:043-645-9008"
                     className="flex items-center gap-2 px-4 py-2 border border-orange-primary/30 text-orange-primary rounded-full font-bold text-xs md:text-sm hover:bg-orange-primary/10 transition-all hover:scale-[1.05] whitespace-nowrap"
                   >
-                    <span className="text-base">📞</span>
+                    <Phone className="w-4 h-4" />
                     {t("about.buttons.call")}
                   </a>
                 </div>
