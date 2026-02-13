@@ -8,9 +8,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const menuTitle = messages.MenuPage.title;
   // @ts-ignore
   const siteTitle = messages.HomePage.title;
+  // @ts-ignore
+  const siteDescription = messages.HomePage.description;
 
   return {
-    title: `${menuTitle} | ${siteTitle}`,
+    title: menuTitle,
+    description: `${siteTitle} ${menuTitle}: ${siteDescription}`,
   };
 }
 

@@ -41,6 +41,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         disabled={isPending}
+        aria-label="Change language"
         className={`flex items-center gap-2.5 pl-3 pr-2 py-1.5 rounded-full border border-soft-brown/10 bg-warm-beige hover:bg-ivory transition-all shadow-sm group ${
           isOpen ? "ring-1 ring-orange-primary bg-ivory" : ""
         }`}

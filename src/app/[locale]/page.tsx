@@ -1,6 +1,25 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Gallery from "@/components/home/Gallery";
+import { getMessages } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  // @ts-ignore
+  const siteTitle = messages.HomePage.title;
+  // @ts-ignore
+  const siteDescription = messages.HomePage.description;
+
+  return {
+    title: siteTitle,
+    description: siteDescription,
+    openGraph: {
+      title: siteTitle,
+      description: siteDescription,
+    },
+  };
+}
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
