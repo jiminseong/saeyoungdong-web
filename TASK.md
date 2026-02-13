@@ -5,40 +5,43 @@
 
 ## 1. 초기 설정 (Setup)
 - [x] Next.js (App Router, TypeScript) 프로젝트 생성
-- [x] TailwindCSS v3/v4 설정 및 `DESIGN_SYSTEM.md` 반영 (Color, Font)
+- [x] 커스텀 컬러(Brown, Beige, Orange) 및 폰트(BMEULJIRO) 설정
 - [x] Next-intl 설정 (ko, en, zh) 및 미들웨어 구성
-- [x] 기본 디렉토리 구조 (messages, components, libs, types, assets) 구성
-- [x] Vercel 배포 및 도메인(saeyoungdong.com) 연결
+- [x] 기본 디렉토리 구조 (messages, components, layout, ui) 구성
+- [x] Vercel 배포 및 도메인 연결 준비
 
 ## 2. 디자인 시스템 구축 (Design System)
-- [x] `globals.css`: 기본 배경색(Warm Beige), 폰트(Pretendard/명조) 설정
-- [x] `tailwind.config.ts` (또는 globals): 커스텀 컬러(Orange, Beige) 및 쉐도우 정의
+- [x] `globals.css`: Warm Beige 배경, BMEULJIRO/Pretendard 폰트 최적화
 - [x] 공통 컴포넌트 개발:
-  - [x] `LangSwitcher`: 언어 변경 컴포넌트 추가
-  - [x] `Button`: Primary(Orange), Secondary(Outline)
-  - [x] `Card`: 메뉴/소개용 둥근 모서리 카드
-  - [x] `Navbar`: 반응형 네비게이션
-  - [x] `Footer`: 정보 및 카피라이트
+  - [x] `LangSwitcher`: 언어 변경 컴포넌트
+  - [x] `Button`: Primary, Outline 스타일
+  - [x] `Navbar`: 반응형 네비게이션 (Fixed, Blur)
+  - [x] `Footer`: Location & Info 스타일 (Naver/Kakao 링크 포함)
+  - [x] `KakaoMap`: 카카오 지도 SDK 연동 및 마커 표시
 
 ## 3. 페이지 개발 (Pages)
-### 3.1 메인 페이지 (`/`) - Landing & About & Contact
-- [ ] Hero Section: 배경 이미지 + 헤드라인 (i18n 적용)
-- [ ] Intro Section: 3가지 핵심 특징 (i18n 적용)
-- [ ] About Section: 매장 소개(룸 사진 슬라이더) 및 편의시설 아이콘
-- [ ] Location Section: 지도 API 연동 & 주차 안내
-- [ ] Contact Section: 전화번호 강조 & 영업시간 안내
+### 3.1 메인 페이지 (`/`)
+- [x] Hero Section: 30년 전통 강조, 슬로건 (i18n), 커스텀 뱃지 및 그림자 최적화
+- [x] Feature Section: 3가지 핵심 강점 (Alternating Layout)
+- [x] Story Section: 브랜드 스토리 및 매장 분위기 (반응형 최적화)
+- [x] Gallery Section: 무한 루프 자동 스크롤 및 매뉴얼 스와이프 기능
+- [x] Location & Info: 실제 약도 연동 및 영업 정보 (버튼 가독성 보강)
 
 ### 3.2 메뉴 페이지 (`/menu`)
-- [ ] `MENU_INFO` 다국어 데이터 확장 (ko.json, en.json, zh.json)
-- [ ] 카테고리 탭 (고기류/식사류/주류) 구현
-- [ ] 메뉴 리스트 컴포넌트: 이미지 + 가격 + 설명 표시 (다국어)
+- [x] `ko.json` 메뉴 데이터 업데이트 (실제 메뉴판 기준 최신화)
+- [x] 카테고리별 메뉴 리스트: 한우, 돼지고기, 식사류, 주류 구성
+- [x] 메뉴 아이템 컴포넌트: 대시 라인 스타일링 및 다국어 설명 대응
+- [ ] `en.json`, `zh.json` 영문/중문 메뉴 번역 완성
 
 ## 4. 기능 및 최적화
+- [x] 반응형 세부 조정: 모바일 뱃지 스케일, 히어로 섹션 여백 최적화
+- [x] 내추럴 디자인: 브라운 톤 organic/photo 그림자 및 미세 테두리 적용
+- [x] 커스텀 언어 선택기: 프리미엄 드롭다운(Picker) 방식 구현
 - [ ] SEO 메타 태그 (Title, Description, OG Image) 설정
-- [ ] 이미지 최적화 (Next/Image 활용)
-- [ ] 반응형 테스트 (Mobile, Tablet, Desktop)
-- [ ] 접근성 점검 (Lighthouse)
+- [ ] 이미지 최적화 (실제 고화질 에셋 반영 필요)
+- [ ] 성능 및 접근성 최적화
 
-## 5. 최종 검토 및 배포
-- [ ] 도메인 SSL 인증서 확인
-- [ ] 최종 빌드 및 프로덕션 배포
+## 5. 최종 검토
+- [ ] 다국어 번역 검수 (특히 영문/중문 자연스러움 확인)
+- [ ] 모든 버튼 및 링크 동작 확인
+- [ ] 최종 배포 및 도메인 연결
