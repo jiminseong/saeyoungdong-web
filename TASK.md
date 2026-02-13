@@ -21,7 +21,7 @@
 
 ## 3. 페이지 개발 (Pages)
 ### 3.1 메인 페이지 (`/`)
-- [x] Hero Section: 30년 전통 강조, 슬로건 (i18n), 커스텀 뱃지 및 그림자 최적화
+- [x] Hero Section: 33년 전통 강조, 슬로건 (i18n), 커스텀 뱃지 및 그림자 최적화
 - [x] Feature Section: 3가지 핵심 강점 (Alternating Layout)
 - [x] Story Section: 브랜드 스토리 및 매장 분위기 (반응형 최적화)
 - [x] Gallery Section: 무한 루프 자동 스크롤 및 매뉴얼 스와이프 기능

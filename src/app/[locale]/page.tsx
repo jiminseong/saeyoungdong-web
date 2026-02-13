@@ -18,7 +18,7 @@ export default function HomePage() {
           </span>
 
           <h1 className="text-5xl md:text-7xl font-serif text-soft-brown leading-tight text-balance-header tracking-tight">
-            <span className="block text-xl md:text-2xl font-sans font-light text-light-brown mb-4 tracking-normal">
+            <span className="block text-xl md:text-2xl font-sans font-light text-light-brown  tracking-normal">
               {t("hero.subheadline")}
             </span>
             <span className="font-semibold">{t("title")}</span>
@@ -28,7 +28,7 @@ export default function HomePage() {
             {t("hero.headline")}
           </p>
 
-          <div className="flex gap-3 mt-6">
+          <div className="flex gap-3">
             <Link
               href="/menu"
               className="px-7 py-3 bg-soft-brown text-warm-beige font-serif rounded-full hover:bg-orange-primary transition-colors"
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <div className="w-8 h-px bg-white/40 mb-2" />
 
                 <h4 className="text-base md:text-lg font-serif font-bold leading-tight tracking-tight drop-shadow-md">
-                  30년 전통
+                  33년 전통
                   <span className="block text-xs md:text-sm font-normal mt-0.5 opacity-90">
                     숯불갈비
                   </span>
