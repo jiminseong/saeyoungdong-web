@@ -24,7 +24,7 @@ export default function Navbar() {
           className="text-xl font-serif text-soft-brown flex items-center gap-2"
           locale={locale}
         >
-          <span className="w-2 h-2 rounded-full bg-orange-primary inline-block font-semibold"></span>
+          <span className="w-2 h-2 rounded-full bg-orange-primary inline-block font-semibold" />{" "}
           새영동숯불갈비
         </Link>
 

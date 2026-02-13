@@ -2,15 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
 @import "tailwindcss";
 
-@font-face {
-  font-family: "BMEULJIRO";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/BMEULJIRO.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   /* --- Warm Color Palette (따뜻한 톤) --- */
   --color-warm-beige: #faf6f0; /* 배경: 따뜻한 크림 */
@@ -26,7 +17,7 @@
 
   /* Font */
   --font-pretendard: "Pretendard", -apple-system, "Noto Sans KR", sans-serif;
-  --font-euljiro: "BMEULJIRO", "Noto Serif KR", serif;
+  --font-euljiro: "Noto Serif KR", serif;
 }
 
 @theme inline {
