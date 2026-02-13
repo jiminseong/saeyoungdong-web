@@ -9,6 +9,10 @@
       "ctaMenu": "메뉴 보기",
       "ctaReservation": "전화 문의"
     },
+    "heritageBadge": {
+      "title": "33년 전통",
+      "subtitle": "숯불갈비"
+    },
     "intro": {
       "feature1": "직접 뽑은 함흥냉면",
       "feature1Desc": "고구마 전분 100%로 직접 반죽해 뽑아냅니다.",
@@ -37,6 +41,12 @@
         "kakao": "카카오맵에서 보기",
         "call": "전화하기"
       }
+    },
+    "gallery": {
+      "title": "매장 전경 및 단체실",
+      "subtitle": "쾌적한 공간과 프라이빗한 룸",
+      "description": "가족 모임과 단체 회식에 최적화된 독립된 룸이 준비되어 있습니다.\n전화 문의 시 방 번호를 알려주시면 빠른 예약에 도움이 됩니다.",
+      "roomBadge": "{num}번방"
     }
   },
   "MenuPage": {
@@ -86,9 +96,20 @@
       "yukgaejang": "한우를 듬뿍 넣어 푹 끓여낸 얼큰한 육개장",
       "galbitang": "정성으로 우려낸 깊고 진한 한우 갈비탕",
       "doenjang": "직접 담근 된장과 멸치 육수의 진한 맛"
+    },
+    "notices": {
+      "weight": "* 모든 고기 메뉴의 중량은 정량(생고기 기준)을 원칙으로 합니다.",
+      "season": "* 계절 및 수급 상황에 따라 일부 메뉴가 변경될 수 있습니다."
     }
   },
   "Common": {
+    "nav": {
+      "home": "홈",
+      "menu": "메뉴"
+    },
+    "footer": {
+      "rights": "© 2026 제천새영동숯불갈비. All rights reserved."
+    },
     "loading": "로딩 중...",
     "error": "오류가 발생했습니다.",
     "won": "원"

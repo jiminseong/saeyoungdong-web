@@ -6,9 +6,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const messages = await getMessages({ locale });
   // @ts-ignore
   const menuTitle = messages.MenuPage.title;
+  // @ts-ignore
+  const siteTitle = messages.HomePage.title;
 
   return {
-    title: `${menuTitle} | 새영동 숯불갈비`,
+    title: `${menuTitle} | ${siteTitle}`,
   };
 }
 
@@ -87,8 +89,9 @@ export default function MenuPage() {
 
         <footer className="mt-32 text-center border-t border-soft-brown/10 pt-10">
           <p className="text-light-brown font-sans text-sm break-keep">
-            * 모든 고기 메뉴의 중량은 정량(생고기 기준)을 원칙으로 합니다.
-            <br />* 계절 및 수급 상황에 따라 일부 메뉴가 변경될 수 있습니다.
+            {t("notices.weight")}
+            <br />
+            {t("notices.season")}
           </p>
         </footer>
       </div>

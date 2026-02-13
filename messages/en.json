@@ -9,6 +9,10 @@
       "ctaMenu": "View Menu",
       "ctaReservation": "Call Now"
     },
+    "heritageBadge": {
+      "title": "33 Years of",
+      "subtitle": "Tradition"
+    },
     "intro": {
       "feature1": "Handmade Noodles",
       "feature1Desc": "Freshly pulled 100% sweet potato starch noodles.",
@@ -17,12 +21,24 @@
       "feature3": "Natural Seasoning",
       "feature3Desc": "Marinated with 6 medicinal herbs for a subtle, natural flavor."
     },
+    "story": {
+      "title": "A tradition of taste for over 30 years",
+      "p1": "Since its opening in 1993, Saeyoungdong Galbi has been a beloved destination for Jecheon citizens, preserving its traditional flavors through two generations.",
+      "p2": "Our commitment to using only carefully selected Hanwoo beef and domestic ingredients, combined with warm hospitality, has been our most precious value for over three decades.",
+      "quote": "Experience the authentic flavors within the clean touch of tradition."
+    },
     "about": {
       "title": "Location & Reservation",
       "address": "13 Pungyang-ro 9-gil, Jecheon-si, Chungbuk",
       "parking": "Citizen Parking Tower (Free ticket), Joongang Church Parking",
       "hours": "Open: 11:00 - 22:00 (Please call)",
       "contact": "Reservation: 043-645-9008"
+    },
+    "gallery": {
+      "title": "Gallery & Private Rooms",
+      "subtitle": "Comfortable Space & Private Rooms",
+      "description": "We have independent rooms optimized for family gatherings and group dinners. Providing the room number helps with faster reservations.",
+      "roomBadge": "ROOM {num}"
     }
   },
   "MenuPage": {
@@ -33,11 +49,59 @@
       "drink": "Drink"
     },
     "items": {
-      "galbi": "Fresh Galbi",
-      "anchang": "Anchangsal"
+      "hanwoo_galbi": "Fresh Hanwoo Ribs (2 pcs)",
+      "hanwoo_anchang": "Hanwoo Anchangsal (160g)",
+      "hanwoo_galbisal": "Hanwoo Rib Meat (180g)",
+      "hanwoo_deungsim": "Fresh Hanwoo Sirloin (180g)",
+      "hanwoo_teukyang": "Herbal Hanwoo Tripe (180g)",
+      "hanwoo_yangnyeom_galbisal": "Herbal Seasoned Rib Meat (180g)",
+      "hanwoo_yangnyeom_so_galbi": "Herbal Seasoned Beef Ribs (2 pcs)",
+      "hanwoo_yukhoe": "Herbal Beef Tartare",
+      "pork_galbi": "Herbal Pork Ribs (250g)",
+      "pork_jjageuli": "Herbal Pork Rib Stew (250g)",
+      "pork_samgyeopsal": "Pork Belly (180g)",
+      "naengmyeon_mul": "Hamheung Water Cold Noodles",
+      "naengmyeon_bibim": "Hamheung Spicy Cold Noodles",
+      "naengmyeon_hoe": "Hamheung Raw Fish Cold Noodles",
+      "yukgaejang": "Spicy Beef Soup",
+      "galbitang": "Hanwoo Short Rib Soup",
+      "doenjang": "Soybean Paste Stew",
+      "rice": "Steamed Rice",
+      "drinks_soju": "Soju / Beer",
+      "soda": "Soft Drinks"
+    },
+    "descriptions": {
+      "hanwoo_galbi": "Premium domestic Hanwoo, hand-prepared by the owner",
+      "hanwoo_anchang": "Deep-flavored and tender premium Hanwoo flank",
+      "hanwoo_galbisal": "Domestic Hanwoo with excellent nutty flavor",
+      "hanwoo_deungsim": "Meltingly tender domestic premium Hanwoo",
+      "hanwoo_teukyang": "Healthy Hanwoo tripe seasoned with 6 herbal medicines",
+      "hanwoo_yangnyeom_galbisal": "Seasoned rib meat with deep herbal flavor",
+      "hanwoo_yangnyeom_so_galbi": "Naturally sweet ribs marinated with traditional recipe",
+      "hanwoo_yukhoe": "Fresh Hanwoo tartare preserving its natural elegance",
+      "pork_galbi": "Pork ribs marinated in handmade herbal seasoning",
+      "pork_jjageuli": "Spicy and hearty specialty pork rib stew",
+      "pork_samgyeopsal": "Nutty and chewy domestic fresh pork belly",
+      "naengmyeon_mul": "Hand-pulled noodles using 100% sweet potato starch",
+      "naengmyeon_bibim": "Harmony of spicy and sweet secret seasoning",
+      "naengmyeon_hoe": "Special cold noodles with seasoned fish topping",
+      "yukgaejang": "Spicy beef soup with generous Hanwoo pieces",
+      "galbitang": "Rich and deep Hanwoo short rib soup",
+      "doenjang": "Deep flavor from handmade paste and anchovy broth"
+    },
+    "notices": {
+      "weight": "* Weight of all meat items is based on raw weight.",
+      "season": "* Some items may change based on season and availability."
     }
   },
   "Common": {
+    "nav": {
+      "home": "HOME",
+      "menu": "MENU"
+    },
+    "footer": {
+      "rights": "© 2026 Jecheon Saeyoungdong Galbi. All rights reserved."
+    },
     "loading": "Loading...",
     "error": "An error occurred.",
     "won": "won"

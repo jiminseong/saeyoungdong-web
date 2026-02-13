@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import Gallery from "@/components/home/Gallery";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -45,7 +46,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex-1 w-full relative">
-          <div className="relative w-full aspect-[4/5] bg-ivory rounded-[2rem] overflow-hidden shadow-photo border border-soft-brown/5">
+          <div className="relative w-full aspect-[1/1] bg-ivory rounded-[2rem] overflow-hidden shadow-photo border border-soft-brown/5">
             <div className="absolute inset-0 bg-gradient-to-br from-ivory to-orange-light flex items-center justify-center text-light-brown font-serif text-lg">
               Hero Image
             </div>
@@ -70,9 +71,9 @@ export default function HomePage() {
                 <div className="w-8 h-px bg-white/40 mb-2" />
 
                 <h4 className="text-base md:text-lg font-serif font-bold leading-tight tracking-tight drop-shadow-md">
-                  33년 전통
+                  {t("heritageBadge.title")}{" "}
                   <span className="block text-xs md:text-sm font-normal mt-0.5 opacity-90">
-                    숯불갈비
+                    {t("heritageBadge.subtitle")}
                   </span>
                 </h4>
 
@@ -156,40 +157,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Gallery Section */}
-      <section className="bg-warm-beige py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif text-soft-brown mb-4 tracking-tight">
-              매장 전경 및 단체실
-            </h2>
-            <p className="text-light-brown font-sans break-keep max-w-2xl">
-              쾌적하고 넓은 공간, 가족 모임과 단체 회식에 최적화된 독립된 룸이 준비되어 있습니다.
-              최대 40명까지 수용 가능한 대형 룸과 프라이빗한 소형 룸을 갖추고 있습니다.
-            </p>
-          </div>
-        </div>
 
-        {/* Scrolling Container */}
-        <div className="w-full relative overflow-hidden group">
-          {/* We use two sets of items for a seamless loop */}
-          <div className="flex gap-6 animate-scroll group-hover:pause overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide md:cursor-grab active:md:cursor-grabbing">
-            {[...Array(10)].map((_, i) => (
-              <div
-                key={i}
-                className="min-w-[85vw] md:min-w-[450px] aspect-video bg-ivory rounded-2xl overflow-hidden shadow-photo border border-soft-brown/10 flex-shrink-0 snap-center"
-              >
-                <div className="w-full h-full bg-orange-light flex flex-col items-center justify-center text-orange-primary/30 font-serif relative">
-                  <span className="text-4xl opacity-20 mb-2">Room {(i % 5) + 1}</span>
-                  <span className="text-sm font-sans tracking-widest uppercase opacity-60">
-                    Sae Young Dong
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Gallery Section */}
+      <Gallery />
     </div>
   );
 }

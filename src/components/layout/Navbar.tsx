@@ -1,18 +1,20 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "../common/LanguageSwitcher";
-import { useLocale } from "next-intl";
 import { useState } from "react";
 
 export default function Navbar() {
+  const t = useTranslations("HomePage");
+  const tc = useTranslations("Common");
   const locale = useLocale();
   const currentPath = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "HOME" },
-    { href: "/menu", label: "MENU" },
+    { href: "/", label: tc("nav.home") },
+    { href: "/menu", label: tc("nav.menu") },
   ];
 
   return (
@@ -25,7 +27,7 @@ export default function Navbar() {
           locale={locale}
         >
           <span className="w-2 h-2 rounded-full bg-orange-primary inline-block font-semibold" />{" "}
-          새영동숯불갈비
+          {t("title")}
         </Link>
 
         {/* Desktop Menu */}

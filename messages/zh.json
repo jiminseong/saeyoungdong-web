@@ -9,6 +9,10 @@
       "ctaMenu": "查看菜单",
       "ctaReservation": "电话预约"
     },
+    "heritageBadge": {
+      "title": "33年传统",
+      "subtitle": "炭火排骨"
+    },
     "intro": {
       "feature1": "手工冷面",
       "feature1Desc": "采用 100% 地瓜淀粉，现点现做。",
@@ -17,27 +21,87 @@
       "feature3": "天然药材腌制",
       "feature3Desc": "使用黄芪、甘草等 6 种药材腌制，口感清淡柔和。"
     },
+    "story": {
+      "title": "传承三十余载的真心之味",
+      "p1": "赛永洞(Sae Young Dong)炭火排骨自1993年开业以来，深受堤川市民的喜爱，并由第二代继承人坚守着那份传统美味。",
+      "p2": "坚持只选顶级韩牛和国产食材的正直精神，以及把顾客当作家人的热情款待，是我们三十多年来守护的最珍贵价值。",
+      "quote": "在洁净的古朴氛围中，体验传统风味的真谛。"
+    },
     "about": {
       "title": "位置与预约",
       "address": "忠清北道 堤川市 丰阳路9街 13",
       "parking": "市民停车塔（提供停车券），中央圣洁教会停车场",
       "hours": "营业时间: 11:00 - 22:00 (请电话咨询)",
       "contact": "预约电话: 043-645-9008"
+    },
+    "gallery": {
+      "title": "店面全景及团体房",
+      "subtitle": "舒适的空间与私密包间",
+      "description": "准备了最适合家庭聚회和团体聚餐的独立包间。咨询时如能告知房间号，将有助于更快速地为您预约。",
+      "roomBadge": "{num}号房"
     }
   },
   "MenuPage": {
-    "title": "菜单",
+    "title": "菜单介绍",
     "categories": {
-      "beef": "烤肉类",
-      "meal": "主食类",
-      "drink": "酒类"
+      "beef": "肉类",
+      "meal": "主食",
+      "drink": "酒水"
     },
     "items": {
-      "galbi": "生排骨",
-      "anchang": "安格斯牛肉"
+      "hanwoo_galbi": "生排骨 (2块)",
+      "hanwoo_anchang": "韩牛安格斯牛肉 (160g)",
+      "hanwoo_galbisal": "韩牛排骨肉 (180g)",
+      "hanwoo_deungsim": "韩牛里脊 (180g)",
+      "hanwoo_teukyang": "韩方韩牛牛百叶 (180g)",
+      "hanwoo_yangnyeom_galbisal": "韩方药材调味排骨肉 (180g)",
+      "hanwoo_yangnyeom_so_galbi": "韩方药材调味牛排骨 (2块)",
+      "hanwoo_yukhoe": "韩方牛肉刺身 (生拌牛肉)",
+      "pork_galbi": "韩方猪排骨 (250g)",
+      "pork_jjageuli": "韩方猪排骨炖锅 (250g)",
+      "pork_samgyeopsal": "鲜猪五花肉 (180g)",
+      "naengmyeon_mul": "咸兴水冷面",
+      "naengmyeon_bibim": "咸兴拌冷面",
+      "naengmyeon_hoe": "咸兴拌鱼片冷面",
+      "yukgaejang": "辣牛肉汤",
+      "galbitang": "韩牛排骨汤",
+      "doenjang": "大酱汤",
+      "rice": "米饭",
+      "drinks_soju": "烧酒 / 啤酒",
+      "soda": "碳酸饮料"
+    },
+    "descriptions": {
+      "hanwoo_galbi": "老板亲自处理的顶级国产韩牛",
+      "hanwoo_anchang": "肉香浓郁且口感柔软的国产韩牛特殊部位",
+      "hanwoo_galbisal": "香气扑鼻、口感极佳的国产韩牛",
+      "hanwoo_deungsim": "入口即化的柔软顶级国产韩牛",
+      "hanwoo_teukyang": "使用6种中药材烹饪的健康韩牛百叶",
+      "hanwoo_yangnyeom_galbisal": "使用特制韩方药材调制的美味排骨肉",
+      "hanwoo_yangnyeom_so_galbi": "采用传统秘方腌制，味道清淡不腻的调味牛排",
+      "hanwoo_yukhoe": "保持新鲜韩牛本味的韩方牛肉刺身",
+      "pork_galbi": "使用自制韩方药材酱汁熟成的猪排骨",
+      "pork_jjageuli": "鲜辣可口的特色猪排骨炖锅",
+      "pork_samgyeopsal": "香浓劲道的国产鲜五花肉",
+      "naengmyeon_mul": "使用100%红薯淀粉现拉的面条",
+      "naengmyeon_bibim": "甜辣适中的秘制酱汁，口感绝佳",
+      "naengmyeon_hoe": "加入国产调味鱼片拌制的特色冷面",
+      "yukgaejang": "加入大量韩牛熬制的鲜辣牛肉汤",
+      "galbitang": "精心熬制的香浓韩牛排骨汤",
+      "doenjang": "采用自制大酱和鳀鱼高汤熬制的浓郁味道"
+    },
+    "notices": {
+      "weight": "* 所有肉类菜单的重量均以生肉重量为准。",
+      "season": "* 部分菜单可能会根据季节或食材供应情况而有所变动。"
     }
   },
   "Common": {
+    "nav": {
+      "home": "首页",
+      "menu": "菜单"
+    },
+    "footer": {
+      "rights": "© 2026 堤川新永东炭火排骨. 版权所有."
+    },
     "loading": "加载中...",
     "error": "发生错误。",
     "won": "韩元"

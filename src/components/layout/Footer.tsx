@@ -9,6 +9,7 @@ const KAKAO_MAP_URL = "https://place.map.kakao.com/9822284";
 
 export default function Footer() {
   const t = useTranslations("HomePage");
+  const tc = useTranslations("Common");
 
   return (
     <footer className="w-full">
@@ -99,9 +100,19 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-[#2A1810] text-light-brown py-6">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-          <p>© 2026 새영동 숯불갈비. All rights reserved.</p>
-          <p>Since 1993</p>
+        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-4">
+          <p>{tc("footer.rights")}</p>
+          <p className="flex items-center gap-1.5 opacity-80">
+            Created by{" "}
+            <a
+              href="https://mildolab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:text-orange-primary transition-colors hover:underline underline-offset-4"
+            >
+              Mildo
+            </a>
+          </p>
         </div>
       </div>
     </footer>
