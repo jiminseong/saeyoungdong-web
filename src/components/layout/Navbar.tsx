@@ -51,6 +51,7 @@ export default function Navbar() {
 
         {/* Right Section: Lang + Hamburger */}
         <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
           {/* Mobile Hamburger */}
           <button
             className="md:hidden flex flex-col gap-1.5 p-2"

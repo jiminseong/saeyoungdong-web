@@ -23,8 +23,8 @@
     },
     "story": {
       "title": "A tradition of taste for over 30 years",
-      "p1": "Since its opening in 1993, Saeyoungdong Galbi has been a beloved destination for Jecheon citizens, preserving its traditional flavors through two generations.",
-      "p2": "Our commitment to using only carefully selected Hanwoo beef and domestic ingredients, combined with warm hospitality, has been our most precious value for over three decades.",
+      "p1": "",
+      "p2": "Our commitment to using only carefully selected Hanwoo beef and fresh ingredients, combined with warm hospitality, has been our most precious value for over three decades.",
       "quote": "Experience the authentic flavors within the clean touch of tradition."
     },
     "about": {
@@ -76,7 +76,8 @@
       "galbitang": "Hanwoo Short Rib Soup",
       "doenjang": "Soybean Paste Stew",
       "rice": "Steamed Rice",
-      "drinks_soju": "Soju / Beer",
+      "drinks_soju": "Soju",
+      "drinks_beer": "Beer",
       "soda": "Soft Drinks"
     },
     "descriptions": {
@@ -84,7 +85,7 @@
       "hanwoo_anchang": "Deep-flavored and tender premium Hanwoo flank",
       "hanwoo_galbisal": "Domestic Hanwoo with excellent nutty flavor",
       "hanwoo_deungsim": "Meltingly tender domestic premium Hanwoo",
-      "hanwoo_teukyang": "Healthy Hanwoo tripe seasoned with 6 herbal medicines",
+      "hanwoo_teukyang": "Healthy Hanwoo tripe seasoned with special herbal seasoning",
       "hanwoo_yangnyeom_galbisal": "Seasoned rib meat with deep herbal flavor",
       "hanwoo_yangnyeom_so_galbi": "Naturally sweet ribs marinated with traditional recipe",
       "hanwoo_yukhoe": "Fresh Hanwoo tartare preserving its natural elegance",
@@ -93,10 +94,10 @@
       "pork_samgyeopsal": "Nutty and chewy domestic fresh pork belly",
       "naengmyeon_mul": "Hand-pulled noodles using 100% sweet potato starch",
       "naengmyeon_bibim": "Harmony of spicy and sweet secret seasoning",
-      "naengmyeon_hoe": "Special cold noodles with seasoned fish topping",
-      "yukgaejang": "Spicy beef soup with generous Hanwoo pieces",
+      "naengmyeon_hoe": "Special cold noodles with seasoned stingray topping",
+      "yukgaejang": "Spicy and rich beef soup",
       "galbitang": "Rich and deep Hanwoo short rib soup",
-      "doenjang": "Deep flavor from handmade paste and anchovy broth"
+      "doenjang": ""
     },
     "notices": {
       "weight": "* Weight of all meat items is based on raw weight.",

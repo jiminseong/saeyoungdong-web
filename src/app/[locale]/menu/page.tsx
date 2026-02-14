@@ -52,7 +52,8 @@ export default function MenuPage() {
     {
       id: "drink",
       items: [
-        { id: "drinks_soju", price: "5,000" },
+        { id: "drinks_soju", price: "4,000" },
+        { id: "drinks_beer", price: "5,000" },
         { id: "soda", price: "2,000" },
       ],
     },
