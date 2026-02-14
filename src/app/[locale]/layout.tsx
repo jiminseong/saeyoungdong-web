@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       images: [
         {
-          url: "/images/og-image.png",
+          url: "/images/og-image-v2.png",
           width: 1200,
           height: 630,
           alt: siteTitle,
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: siteTitle,
       description: siteDescription,
-      images: ["/images/og-image.png"],
+      images: ["/images/og-image-v2.png"],
     },
     robots: {
       index: true,
@@ -110,7 +110,7 @@ export default async function LocaleLayout({
               name: siteTitle,
               description: siteDescription,
               image: [
-                `${process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app"}/images/og-image.png`,
+                `${process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app"}/images/og-image-v2.png`,
               ],
               address: {
                 "@type": "PostalAddress",
