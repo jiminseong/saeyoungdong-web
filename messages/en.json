@@ -45,7 +45,7 @@
     "gallery": {
       "title": "Gallery & Private Rooms",
       "subtitle": "Comfortable Space & Private Rooms",
-      "description": "We have independent rooms optimized for family gatherings and group dinners. Providing the room number helps with faster reservations.",
+      "description": "We have three independent rooms optimized for family gatherings and group dinners. Enjoy your meal in a comfortable and private space.",
       "roomBadge": "ROOM {num}",
       "dragToExplore": "Drag to explore"
     }
@@ -115,6 +115,7 @@
     },
     "loading": "Loading...",
     "error": "An error occurred.",
+    "imageComingSoon": "Photo coming soon",
     "won": "won"
   }
 }
