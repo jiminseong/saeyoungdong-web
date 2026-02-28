@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -19,6 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function MenuPage() {
   const t = useTranslations("MenuPage");
+  const tc = useTranslations("Common");
+  const menuImageById: Partial<Record<string, string>> = {
+    hanwoo_galbi: "/images/menu/생갈비.png",
+  };
 
   const categories = [
     {
@@ -84,6 +89,9 @@ export default function MenuPage() {
                     name={t(`items.${item.id}`)}
                     price={item.price}
                     desc={t.has(`descriptions.${item.id}`) ? t(`descriptions.${item.id}`) : ""}
+                    imageSrc={menuImageById[item.id]}
+                    imageAlt={t(`items.${item.id}`)}
+                    placeholderLabel={tc("imageComingSoon")}
                   />
                 ))}
               </div>
@@ -103,9 +111,38 @@ export default function MenuPage() {
   );
 }
 
-function MenuItem({ name, price, desc }: { name: string; price: string; desc: string }) {
+function MenuItem({
+  name,
+  price,
+  desc,
+  imageSrc,
+  imageAlt,
+  placeholderLabel,
+}: {
+  name: string;
+  price: string;
+  desc: string;
+  imageSrc?: string;
+  imageAlt: string;
+  placeholderLabel: string;
+}) {
   return (
-    <div className="flex flex-col gap-2 group cursor-default">
+    <article className="flex flex-col gap-4 p-4 md:p-5 rounded-2xl border border-soft-brown/10 bg-ivory/30 group cursor-default">
+      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-soft-brown/10 bg-warm-beige">
+        {imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-light-brown/70 text-sm md:text-base font-sans">
+            {placeholderLabel}
+          </div>
+        )}
+      </div>
       <div className="flex justify-between items-baseline gap-2 group-hover:translate-x-1 transition-transform duration-300">
         <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0">{name}</h3>
         <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5 min-w-[10px]" />
@@ -118,6 +155,6 @@ function MenuItem({ name, price, desc }: { name: string; price: string; desc: st
           {desc}
         </p>
       )}
-    </div>
+    </article>
   );
 }
