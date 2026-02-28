@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Gallery from "@/components/home/Gallery";
 import { getMessages } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -67,9 +68,15 @@ export default function HomePage() {
 
         <div className="flex-1 w-full relative">
           <div className="relative w-full aspect-[1/1] bg-ivory rounded-[2rem] overflow-hidden shadow-photo border border-soft-brown/5">
-            <div className="absolute inset-0 bg-gradient-to-br from-ivory to-orange-light flex items-center justify-center text-light-brown font-serif text-lg">
-              Hero Image
-            </div>
+            <Image
+              src="/가게외관.png"
+              alt={t("gallery.title")}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-soft-brown/15 via-transparent to-transparent" />
           </div>
           {/* Floating Heritage Badge - Enhanced Seal Design */}
           <div className="absolute -bottom-6 -left-2 md:-bottom-10 md:-left-10 w-32 h-32 md:w-36 md:h-36 z-20 group scale-75 md:scale-100 origin-bottom-left">

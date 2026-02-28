@@ -3,23 +3,27 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Gallery() {
   const t = useTranslations("HomePage");
   const scrollRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [constraints, setConstraints] = useState({ left: 0, right: 0 });
+  const [isDraggable, setIsDraggable] = useState(false);
 
-  // 10 items as before
-  const roomItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const roomImages = ["/images/room/1.jpeg", "/images/room/2.jpeg", "/images/room/3.jpeg"];
 
   useEffect(() => {
     const updateConstraints = () => {
       if (scrollRef.current && containerRef.current) {
         const scrollWidth = scrollRef.current.scrollWidth;
         const containerWidth = containerRef.current.offsetWidth;
+        const canDrag = scrollWidth > containerWidth;
+
+        setIsDraggable(canDrag);
         setConstraints({
-          left: -(scrollWidth - containerWidth + 48), // 48 is for padding
+          left: canDrag ? Math.min(0, -(scrollWidth - containerWidth + 48)) : 0,
           right: 0,
         });
       }
@@ -43,11 +47,13 @@ export default function Gallery() {
                 {t("gallery.description")}
               </p>
             </div>
-            <div className="hidden md:block">
-              <span className="text-light-brown/40 text-[10px] font-sans tracking-[0.2em] uppercase">
-                {t("gallery.dragToExplore")}
-              </span>
-            </div>
+            {isDraggable && (
+              <div className="hidden md:block">
+                <span className="text-light-brown/40 text-[10px] font-sans tracking-[0.2em] uppercase">
+                  {t("gallery.dragToExplore")}
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -55,60 +61,51 @@ export default function Gallery() {
       {/* Draggable Area */}
       <div
         ref={containerRef}
-        className="w-full relative cursor-grab active:cursor-grabbing touch-pan-y"
+        className={`w-full relative touch-pan-y ${
+          isDraggable ? "cursor-grab active:cursor-grabbing" : "cursor-default"
+        }`}
       >
         <motion.div
           ref={scrollRef}
-          className="flex gap-6 px-6"
-          drag="x"
+          className={`flex gap-6 px-6 ${isDraggable ? "justify-start" : "justify-center"}`}
+          drag={isDraggable ? "x" : false}
           dragConstraints={constraints}
           dragElastic={0.1}
           dragTransition={{ power: 0.2, timeConstant: 200 }}
-          whileTap={{ cursor: "grabbing" }}
+          whileTap={isDraggable ? { cursor: "grabbing" } : undefined}
         >
-          {roomItems.map((num, i) => {
-            const roomNum = (i % 5) + 1;
-            return (
-              <div
-                key={`gallery-item-${num}`}
-                className="min-w-[80vw] md:min-w-[450px] aspect-video bg-ivory rounded-[2rem] overflow-hidden shadow-photo border border-soft-brown/5 flex-shrink-0 relative group/item select-none"
-              >
-                {/* Simplified Badge */}
-                <div className="absolute top-6 left-6 z-20">
-                  <div className="bg-orange-primary text-white text-xs md:text-sm font-bold px-5 py-2 rounded-full shadow-photo-lg backdrop-blur-sm bg-orange-primary/90">
-                    {t("gallery.roomBadge", { num: roomNum })}
-                  </div>
-                </div>
-
-                {/* Placeholder Image Content */}
-                <div className="w-full h-full bg-orange-light/30 flex flex-col items-center justify-center text-orange-primary/20 font-serif transition-transform duration-1000 group-hover/item:scale-105">
-                  <div className="w-16 h-px bg-orange-primary/10 mb-4" />
-                  <span className="text-4xl md:text-5xl opacity-10 mb-2">Room {roomNum}</span>
-                  <span className="text-[10px] font-sans tracking-[0.3em] uppercase opacity-30">
-                    Sae Young Dong
-                  </span>
-                  <div className="w-16 h-px bg-orange-primary/10 mt-4" />
-                </div>
-
-                {/* Subtle Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-light/10 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity" />
-              </div>
-            );
-          })}
+          {roomImages.map((src, index) => (
+            <div
+              key={`gallery-item-${src}`}
+              className="min-w-[80vw] md:min-w-[450px] aspect-video bg-ivory rounded-[2rem] overflow-hidden shadow-photo border border-soft-brown/5 flex-shrink-0 relative group/item select-none"
+            >
+              <Image
+                src={src}
+                alt={`${t("gallery.title")} ${index + 1}`}
+                fill
+                className="object-cover transition-transform duration-700 group-hover/item:scale-105"
+                sizes="(max-width: 768px) 80vw, 450px"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-soft-brown/20 via-transparent to-transparent opacity-60" />
+            </div>
+          ))}
         </motion.div>
       </div>
 
       {/* Mobile Hint */}
-      <div className="mt-8 flex justify-center md:hidden">
-        <div className="flex gap-1.5">
-          {[1, 2, 3, 4, 5].map((num) => (
-            <div
-              key={`dot-${num}`}
-              className={`w-1.5 h-1.5 rounded-full ${num === 1 ? "bg-orange-primary" : "bg-orange-primary/20"}`}
-            />
-          ))}
+      {isDraggable && (
+        <div className="mt-8 flex justify-center md:hidden">
+          <div className="flex gap-1.5">
+            {roomImages.map((_, index) => (
+              <div
+                key={`dot-${index}`}
+                className={`w-1.5 h-1.5 rounded-full ${index === 0 ? "bg-orange-primary" : "bg-orange-primary/20"}`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
