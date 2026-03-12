@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { getBaseUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app";
+  const baseUrl = getBaseUrl();
   const locales = ["ko", "en", "zh"];
   const paths = ["", "/menu"];
 

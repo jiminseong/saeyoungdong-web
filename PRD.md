@@ -58,5 +58,5 @@
   - **Typography**: Pretendard (본문), 명조 계열 (감성 텍스트)
 
 ## 6. 도메인 및 배포
-- **Main Domain**: `saeyoungdong.com`
-- **Sub Domain (Optional)**: `새영동갈비.com` (Redirect only)
+- **Main Domain**: `새영동갈비.com`
+- **Preview Domain**: `saeyoungdong.vercel.app` (DNS 전파 완료 전 임시 확인용)

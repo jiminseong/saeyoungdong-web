@@ -47,7 +47,8 @@
 
 ## 5. 최종 검토 및 배포
 - [x] 모든 버튼 및 링크 동작 확인 (한국어, 영어, 중국어 경로 및 전화 연결 확인 완료)
-- [x] Vercel 프로덕션 배포 완료 (https://saeyoungdong.vercel.app)
+- [x] Vercel 프로덕션 배포 완료 (Preview: https://saeyoungdong.vercel.app)
+- [ ] 운영 도메인 연결 확인 (https://새영동갈비.com, DNS 전파 대기 중)
 - [x] 필요한 이미지 에셋 리스트(`ASSETS.md`) 작성 완료
 - [ ] 이미지 최적화 (실제 고화질 에셋 제공 시 `next/image` 적용 예정)
 - [ ] 도메인 연결 후 `SEO.md`에 따라 네이버/구글 서치콘솔 등록 (사용자 확인 사항)

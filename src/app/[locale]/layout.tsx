@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { getAbsoluteUrl, getBaseUrl } from "@/lib/site";
 import "../globals.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
+  const baseUrl = getBaseUrl();
   // @ts-ignore
   const siteTitle = messages.HomePage.title;
   // @ts-ignore
@@ -20,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       default: siteTitle,
     },
     description: siteDescription,
-    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app"),
+    metadataBase: new URL(baseUrl),
     alternates: {
       languages: {
         ko: "/ko",
@@ -35,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     verification: {
       google: "google-site-verification-token", // User should replace with actual token
       other: {
-        "naver-site-verification": "naver-site-verification-token", // User should replace with actual token
+        "naver-site-verification": "e8f08dc8741330a4e6bac6bd0f773798f2c555cc",
       },
     },
     openGraph: {
@@ -93,6 +95,7 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const baseUrl = getBaseUrl();
   // @ts-ignore
   const siteTitle = messages.HomePage.title;
   // @ts-ignore
@@ -109,9 +112,7 @@ export default async function LocaleLayout({
               "@type": "Restaurant",
               name: siteTitle,
               description: siteDescription,
-              image: [
-                `${process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app"}/images/og-image-v2.png`,
-              ],
+              image: [getAbsoluteUrl("/images/og-image-v2.png")],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "풍양로9길 13",
@@ -125,8 +126,8 @@ export default async function LocaleLayout({
                 latitude: 37.1392164097053,
                 longitude: 128.209056982319,
               },
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://saeyoungdong.vercel.app",
-              telephone: "+82-43-644-4444", // Example phone, user should verify
+              url: baseUrl,
+              telephone: "+82-43-645-9008",
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",

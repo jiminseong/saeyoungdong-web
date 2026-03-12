@@ -2,6 +2,9 @@
 
 새영동숯불갈비 프로젝트에 적용된 SEO 기술 스택과 배포 후 필수 등록 절차를 안내합니다.
 
+현재 운영 기준 도메인은 `https://새영동갈비.com` 입니다.
+DNS 전파 전에는 접속이 불안정할 수 있으며, 브라우저나 일부 도구에서 `xn--...` 형태의 punycode 도메인으로 보일 수 있는데 정상 동작입니다.
+
 ## 1. 적용된 기술적 SEO 사항
 검색 엔진(구글, 네이버)이 사이트를 잘 읽고 분석할 수 있도록 다음 기능들이 이미 구현되어 있습니다.
 
@@ -17,11 +20,11 @@
 
 ## 2. 배포 후 필수 등록 절차 (Action Items)
 
-사이트 배포(Vercel 등) 완료 후, 다음 사이트에 접속하여 소유권 확인 및 사이트맵 등록을 진행해야 합니다.
+사이트 배포(Vercel 등)와 DNS 전파 완료 후, 다음 사이트에 접속하여 소유권 확인 및 사이트맵 등록을 진행해야 합니다.
 
 ### A. 구글 서치콘솔 (Google Search Console) 등록
 1.  [Google Search Console](https://search.google.com/search-console/about)에 접속합니다.
-2.  속성 유형에서 **URL 접두사**를 선택하고 배포된 사이트 URL(예: `https://saeyoungdong.vercel.app`)을 입력합니다.
+2.  속성 유형에서 **URL 접두사**를 선택하고 운영 사이트 URL(예: `https://새영동갈비.com`)을 입력합니다.
 3.  확인 방법 중 **HTML 태그**를 선택하여 제공되는 `content` 값(예: `google-site-verification=...`)을 복사합니다.
 4.  `src/app/[locale]/layout.tsx` 파일의 `verification.google` 항목에 복사한 값을 붙여넣습니다.
 5.  수정 후 다시 배포하고, 구글 서치콘솔에서 **확인** 버튼을 누릅니다.
