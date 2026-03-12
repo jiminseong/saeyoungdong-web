@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const tc = useTranslations("Common");
+  const storyVisuals = [
+    { src: "/images/ai/story-hall.png", alt: "Story hall" },
+  ];
+  const hasPendingStoryVisual = storyVisuals.length < 2;
 
   return (
     <div className="w-full relative overflow-hidden">
@@ -117,28 +121,35 @@ export default function HomePage() {
       {/* Story Section - Brand Identity */}
       <section className="bg-warm-beige py-24 border-t border-soft-brown/5">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            <div className="flex-1 space-y-8">
-              <h2 className="text-4xl md:text-5xl font-serif text-soft-brown leading-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-12 md:gap-16 lg:items-start">
+            <div className="space-y-8 lg:pr-6">
+              <h2 className="max-w-[10ch] text-[clamp(2.75rem,4.8vw,4.75rem)] font-serif text-soft-brown leading-[1.18] tracking-[-0.03em] break-keep text-balance-header">
                 {t("story.title")}
               </h2>
-              <div className="space-y-4 text-light-brown font-sans text-lg leading-relaxed break-keep">
+              <div className="max-w-[34rem] space-y-4 text-light-brown font-sans text-lg leading-relaxed break-keep">
                 <p>{t("story.p1")}</p>
                 <p>{t("story.p2")}</p>
                 <p className="font-serif italic text-soft-brown pt-4">"{t("story.quote")}"</p>
               </div>
             </div>
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 w-full">
-              <div className="aspect-[4/3] md:aspect-[3/4] bg-ivory rounded-2xl overflow-hidden shadow-organic border border-soft-brown/5">
-                <div className="w-full h-full bg-orange-light flex items-center justify-center text-orange-primary/30 font-serif">
-                  Kitchen
-                </div>
+            <div className="w-full lg:pt-2">
+              <div className="grid grid-cols-1 gap-6 lg:max-w-xl lg:ml-auto">
+                {storyVisuals.map((visual) => (
+                  <EditorialImageCard
+                    key={visual.src}
+                    src={visual.src}
+                    alt={visual.alt}
+                    aspectClassName="aspect-[5/4]"
+                    roundedClassName="rounded-[2rem]"
+                    priority
+                  />
+                ))}
               </div>
-              <div className="aspect-[4/3] md:aspect-[3/4] bg-ivory rounded-2xl overflow-hidden shadow-organic border border-soft-brown/5 md:mt-12">
-                <div className="w-full h-full bg-orange-light flex items-center justify-center text-orange-primary/30 font-serif">
-                  Hall
-                </div>
-              </div>
+              {hasPendingStoryVisual && (
+                <p className="mt-4 text-right text-[11px] font-sans tracking-[0.24em] uppercase text-light-brown/45">
+                  {tc("imageComingSoon")}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -149,9 +160,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col gap-24 md:gap-32">
           {/* Feature 1 */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20">
-            <div className="w-full md:w-1/2 aspect-square bg-warm-beige rounded-[2.5rem] shadow-inner order-1" />
+            <div className="w-full md:w-1/2 order-1">
+              <EditorialImageCard
+                src="/images/ai/feature-naengmyeon.png"
+                alt={t("intro.feature1")}
+                aspectClassName="aspect-square"
+                roundedClassName="rounded-[2.5rem]"
+                priority
+              />
+            </div>
             <div className="flex-1 order-2 space-y-4">
-              <h3 className="text-3xl md:text-5xl font-serif text-soft-brown leading-tight">
+              <h3 className="max-w-[10ch] text-3xl md:text-5xl font-serif text-soft-brown leading-[1.18] tracking-[-0.03em] break-keep text-balance-header">
                 {t("intro.feature1")}
               </h3>
               <p className="text-light-brown leading-relaxed font-sans break-keep text-lg md:text-xl opacity-90">
@@ -162,9 +181,16 @@ export default function HomePage() {
 
           {/* Feature 2 */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20">
-            <div className="w-full md:w-1/2 aspect-square bg-warm-beige rounded-[2.5rem] shadow-inner order-1 md:order-2" />
+            <div className="w-full md:w-1/2 order-1 md:order-2">
+              <EditorialImageCard
+                src="/images/ai/feature-butchering.png"
+                alt={t("intro.feature2")}
+                aspectClassName="aspect-square"
+                roundedClassName="rounded-[2.5rem]"
+              />
+            </div>
             <div className="flex-1 order-2 md:order-1 space-y-4">
-              <h3 className="text-3xl md:text-5xl font-serif text-soft-brown leading-tight">
+              <h3 className="max-w-[10ch] text-3xl md:text-5xl font-serif text-soft-brown leading-[1.18] tracking-[-0.03em] break-keep text-balance-header">
                 {t("intro.feature2")}
               </h3>
               <p className="text-light-brown leading-relaxed font-sans break-keep text-lg md:text-xl opacity-90">
@@ -187,6 +213,39 @@ export default function HomePage() {
 
       {/* Gallery Section */}
       <Gallery />
+    </div>
+  );
+}
+
+function EditorialImageCard({
+  src,
+  alt,
+  aspectClassName,
+  roundedClassName,
+  priority = false,
+}: {
+  src?: string;
+  alt: string;
+  aspectClassName: string;
+  roundedClassName: string;
+  priority?: boolean;
+}) {
+  if (!src) {
+    return (
+      <div className="flex items-center justify-center py-4">
+        <span className="text-[11px] font-sans tracking-[0.24em] uppercase text-light-brown/45">
+          준비중
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`relative w-full overflow-hidden border border-soft-brown/5 bg-ivory shadow-organic ${aspectClassName} ${roundedClassName}`}
+    >
+      <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority={priority} />
+      <div className="absolute inset-0 bg-gradient-to-t from-soft-brown/10 via-transparent to-transparent" />
     </div>
   );
 }

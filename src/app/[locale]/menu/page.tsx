@@ -23,6 +23,10 @@ export default function MenuPage() {
   const tc = useTranslations("Common");
   const menuImageById: Partial<Record<string, string>> = {
     hanwoo_galbi: "/images/menu/생갈비.png",
+    hanwoo_anchang: "/images/ai/menu-anchang.png",
+    hanwoo_galbisal: "/images/ai/menu-galbisal.png",
+    hanwoo_deungsim: "/images/ai/menu-deungsim..png",
+    hanwoo_teukyang: "/images/ai/menu-teukyang.png",
   };
 
   const categories = [
@@ -92,6 +96,7 @@ export default function MenuPage() {
                     imageSrc={menuImageById[item.id]}
                     imageAlt={t(`items.${item.id}`)}
                     placeholderLabel={tc("imageComingSoon")}
+                    showImage={category.id !== "drink"}
                   />
                 ))}
               </div>
@@ -118,6 +123,7 @@ function MenuItem({
   imageSrc,
   imageAlt,
   placeholderLabel,
+  showImage,
 }: {
   name: string;
   price: string;
@@ -125,11 +131,14 @@ function MenuItem({
   imageSrc?: string;
   imageAlt: string;
   placeholderLabel: string;
+  showImage: boolean;
 }) {
+  const hasImage = Boolean(imageSrc);
+
   return (
     <article className="flex flex-col gap-4 p-4 md:p-5 rounded-2xl border border-soft-brown/10 bg-ivory/30 group cursor-default">
-      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-soft-brown/10 bg-warm-beige">
-        {imageSrc ? (
+      {showImage && imageSrc && (
+        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-soft-brown/10 bg-warm-beige">
           <Image
             src={imageSrc}
             alt={imageAlt}
@@ -137,14 +146,17 @@ function MenuItem({
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 40vw"
           />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-light-brown/70 text-sm md:text-base font-sans">
-            {placeholderLabel}
-          </div>
-        )}
-      </div>
+        </div>
+      )}
       <div className="flex justify-between items-baseline gap-2 group-hover:translate-x-1 transition-transform duration-300">
-        <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0">{name}</h3>
+        <div className="min-w-0 flex items-center gap-2">
+          <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0">{name}</h3>
+          {showImage && !hasImage && (
+            <span className="shrink-0 text-[10px] font-sans tracking-[0.2em] uppercase text-light-brown/45">
+              {placeholderLabel}
+            </span>
+          )}
+        </div>
         <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5 min-w-[10px]" />
         <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap flex-shrink-0">
           {price}
