@@ -134,6 +134,7 @@ function MenuItem({
   showImage: boolean;
 }) {
   const hasImage = Boolean(imageSrc);
+  const isStackedPrice = price.includes("/") || price.length > 12;
 
   return (
     <article className="flex flex-col gap-4 p-4 md:p-5 rounded-2xl border border-soft-brown/10 bg-ivory/30 group cursor-default">
@@ -148,20 +149,42 @@ function MenuItem({
           />
         </div>
       )}
-      <div className="flex justify-between items-baseline gap-2 group-hover:translate-x-1 transition-transform duration-300">
-        <div className="min-w-0 flex items-center gap-2">
-          <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0">{name}</h3>
-          {showImage && !hasImage && (
-            <span className="shrink-0 text-[10px] font-sans tracking-[0.2em] uppercase text-light-brown/45">
-              {placeholderLabel}
+      {isStackedPrice ? (
+        <div className="group-hover:translate-x-1 transition-transform duration-300">
+          <div className="flex items-center gap-2">
+            <h3 className="text-xl md:text-2xl font-serif text-soft-brown break-keep whitespace-nowrap">
+              {name}
+            </h3>
+            {showImage && !hasImage && (
+              <span className="shrink-0 text-[10px] font-sans tracking-[0.2em] uppercase text-light-brown/45">
+                {placeholderLabel}
+              </span>
+            )}
+          </div>
+          <div className="mt-3 pt-3 border-t border-dashed border-light-brown/30">
+            <span className="text-xl font-sans text-orange-primary font-bold break-keep">
+              {price}
             </span>
-          )}
+          </div>
         </div>
-        <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5 min-w-[10px]" />
-        <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap flex-shrink-0">
-          {price}
-        </span>
-      </div>
+      ) : (
+        <div className="flex justify-between items-baseline gap-2 group-hover:translate-x-1 transition-transform duration-300">
+          <div className="min-w-0 flex items-center gap-2">
+            <h3 className="text-xl md:text-2xl font-serif text-soft-brown min-w-0 break-keep">
+              {name}
+            </h3>
+            {showImage && !hasImage && (
+              <span className="shrink-0 text-[10px] font-sans tracking-[0.2em] uppercase text-light-brown/45">
+                {placeholderLabel}
+              </span>
+            )}
+          </div>
+          <div className="flex-grow border-b border-dashed border-light-brown/30 mb-1.5 min-w-[10px]" />
+          <span className="text-xl font-sans text-orange-primary font-bold whitespace-nowrap flex-shrink-0">
+            {price}
+          </span>
+        </div>
+      )}
       {desc && (
         <p className="text-sm md:text-base text-light-brown font-sans leading-relaxed break-keep">
           {desc}
